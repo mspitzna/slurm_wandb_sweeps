@@ -3,6 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:4
 #SBATCH --output=sweep-%j.out
+#SBATCH --error=%j.err                  # where to store error messages
 
 # Activate your conda environment
 source activate pytorch

@@ -1,4 +1,6 @@
 #!/bin/bash
+#SBATCH --output=sweep-%j.out
+#SBATCH --error=%j.err                  # where to store error messages
 
 # Check if at least three arguments are provided
 if [ $# -lt 3 ]; then
