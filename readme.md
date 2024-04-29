@@ -16,7 +16,6 @@ This bash script automates the submission of multiple SLURM jobs, where each job
 - `<num_nodes>`: Number of nodes to deploy for the sweeps.
 - `<sweep_id>`: Identifier for the WandB sweep.
 - `<zip_file_path>`: Path to the zip file containing the data or resources for training.
-- `<gpu_per_node>`: (Optional) Number of GPUs per node, defaults to 4 if not specified.
 - `[sbatch_options...]`: Additional SBATCH options as needed.
 
 ### `run_sweep_node.sh`
@@ -24,7 +23,7 @@ This bash script automates the submission of multiple SLURM jobs, where each job
 Executed by `slurm_sweep.sh` for each SLURM job submission, this script sets up the environment, manages data unzipping, and initiates the WandB agents for each specified GPU.
 
 **Usage:**
-Specify the number of GPUs per node directly when calling `slurm_sweep.sh` or leave it to default to 4.
+TODO
 
 ## Data Handling and Environment
 
