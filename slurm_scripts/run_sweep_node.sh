@@ -17,19 +17,21 @@ if [ -z "$2" ]; then
     echo "Error: Zip file path not provided."
     exit 1
 fi
+if [ -z "$3" ]; then
+    echo "Error: Number of GPUs per node not provided."
+    exit 1
+fi
 
 SWEEP_ID=$1
 ZIP_FILE=$2
+GPU_PER_NODE=$3
 
 # Unzip the file into the node-specific temporary directory
 echo "Unzipping $ZIP_FILE into $TMPDIR"
 unzip $ZIP_FILE -d $TMPDIR/
 
-# Default GPU count is 4
-GPU_COUNT=4
-
 # Start the WandB agents, one for each GPU
-for (( i=0; i<GPU_COUNT; i++ ))
+for (( i=0; i<$GPU_PER_NODE; i++ ))
 do
     CUDA_VISIBLE_DEVICES=$i wandb agent $SWEEP_ID &
 done

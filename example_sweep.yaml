@@ -1,0 +1,41 @@
+program: dif_train_horeka.py
+method: grid
+parameters:
+  horeka:
+    value: "True"
+  im_path:
+    value: '.'
+  im_channels:
+    value: 3
+  im_size:
+    value: 256  # Set to a default value
+  im_batch_size:
+    values: [16, 32]
+  num_workers:
+    value: 2
+  im_add_dim:
+    value: 3
+  train_frac:
+    value: 0.75
+  test_frac:
+    value: 0.025
+  preprocessing:
+    value: "dist"
+  num_timesteps:
+    value: 1000  # Set to a default value
+  ddpm_epochs:
+    value: 21  # Set to a default value
+  ddpm_lr:
+    values: [0.001, 0.0003, 0.0001, 0.00005]  # Already specified in your parameters, this can be expanded if needed.
+  beta_start:
+    values: [0.00085, 0.001]  # Example values to optimize
+  beta_end:
+    value: 0.012  # Example values to optimize
+  project_name:
+    value: 'lens_horeka'
+  task_name:
+    value: 'dif_k1_p1'
+  output_path:
+    value: '.'
+  in_memory:
+    value: True
