@@ -17,6 +17,6 @@ shift 3  # Remove the first three arguments, leaving any additional sbatch optio
 for (( i=0; i<$NUM_NODES; i++ ))
 do
     # Pass all remaining arguments directly to sbatch
-    sbatch "$@" --nodes="1" run_sweep_2.sh $SWEEP_ID $ZIP_FILE_PATH
+    sbatch "$@" --nodes="1" run_sweep_node.sh $SWEEP_ID $ZIP_FILE_PATH
     echo "Submitted job $(($i + 1)) of $NUM_NODES"
 done
