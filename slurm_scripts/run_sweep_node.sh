@@ -25,7 +25,6 @@ ZIP_FILE=$2
 echo "Unzipping $ZIP_FILE into $TMPDIR"
 unzip $ZIP_FILE -d $TMPDIR/
 
-# Default GPU count is 1 (not 4 as the initial --gres setting)
 GPU_COUNT=4
 
 # Start the WandB agents, one for each GPU
