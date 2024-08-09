@@ -28,5 +28,5 @@ TODO
 ## Data Handling and Environment
 
 Configured for the Horeka cluster:
-- Initial data is contained within a zip file and is extracted to a temporary directory (`$TMPDIR`) on the node for faster processing during the sweep.
+- Initial data is contained within a zip file and is extracted to the temporary directory (`$TMPDIR`) on each node for faster processing during the sweep.
 - Data persistence and output management after processing must be handled by the executed Python script included in the sweep, which should ensure that data is written back to a persistent storage location (`$HOME / $PROJECT`).
