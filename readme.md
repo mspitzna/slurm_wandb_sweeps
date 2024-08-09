@@ -13,7 +13,7 @@ This bash script automates the submission of multiple SLURM jobs, where each job
 ./slurm_sweep.sh <num_nodes> <sweep_id> <zip_file_path> [sbatch_options...]
 ```
 **Arguments:**
-- `<num_nodes>`: Number of nodes to deploy for the sweeps.
+- `<num_nodes>`: Number of nodes to deploy for the sweep.
 - `<sweep_id>`: Identifier for the WandB sweep.
 - `<zip_file_path>`: Path to the zip file containing the data or resources for training.
 - `[sbatch_options...]`: Additional SBATCH options as needed.
